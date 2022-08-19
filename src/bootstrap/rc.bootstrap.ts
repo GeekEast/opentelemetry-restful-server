@@ -2,6 +2,7 @@ import { RoutingControllersOptions } from "routing-controllers"
 
 import { CONSTANT } from "../enum"
 import { AuthGuard } from "../guards/auth.guard"
+import { ProjectController } from "../modules/project/controller/project.controller"
 import { ErrorLogger } from "../utils/middlewares/error.logger"
 
 export const generateRoutingControllerConfig = () => {
@@ -10,7 +11,7 @@ export const generateRoutingControllerConfig = () => {
     cors: false,
     validation: false,
     classTransformer: false,
-    controllers: [],
+    controllers: [ProjectController],
     middlewares: [ErrorLogger],
     authorizationChecker: AuthGuard,
     development: true

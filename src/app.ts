@@ -1,4 +1,5 @@
 import "reflect-metadata"
+import "./bootstrap/telemetry.bootstrap"
 
 import { useContainer } from "routing-controllers"
 import { Container } from "typedi"
